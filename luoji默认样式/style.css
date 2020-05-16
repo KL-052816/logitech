@@ -1,0 +1,49 @@
+a,
+input,
+button {
+  /*清除点击阴影*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input,
+button {
+  /*清除圆角*/
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+body {
+  margin: 0;
+  /*禁止选中文字*/
+  -webkit-user-select: none;
+}
+body * {
+  -webkit-user-select: none;
+  /*默认字体*/
+  font-family: helvetica;
+}
+body {
+  /*用户横竖屏切换的时候，禁止字体缩放*/
+  -webkit-text-size-adjust: 100%;
+}
+h1 {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+/* css控制字体大小 */
+html {font-size:12px}
+@media screen and (min-width:480px) and (max-width:639px) {html {font-size: 15px;}}
+@media screen and (min-width:640px) and (max-width:719px) {html {font-size: 20px;}}
+@media screen and (min-width:720px) and (max-width:749px) {html {font-size: 22.5px;}}
+@media screen and (min-width:750px) and (max-width:799px) {html {font-size: 23.5px;}}
+@media screen and (min-width:800px) and (max-width:959px) {html {font-size: 25px;}}
+@media screen and (min-width:960px) and (max-width:1079px) {html {font-size: 30px;}}
+@media screen and (min-width:1080px) {html {font-size: 32px;}}
