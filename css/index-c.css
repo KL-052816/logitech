@@ -1,0 +1,109 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.app{
+    background-color: #00BBFD;
+    padding-bottom: 200px;
+}
+.header .header-left{
+    margin-left: 20px;
+    box-sizing: border-box;
+    height: 60px;
+    padding-top: 20px;
+}
+.header .header-left span{
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 4px;
+    width: 25px;
+    height: 4px;
+    background: white;
+}
+.footer{
+    background: #232A2C;
+    padding: 40px 0px;
+    font-size: 0.78rem;
+    color: white;
+}
+.footer-conter{
+    display: flex;
+    padding-bottom: 20px;
+}
+.footer-conter .footer-left{
+    width: 50%;
+}
+.footer-conter .footer-right{
+    width: 50%;
+}
+.footer-conter div{
+    padding:0 20px;
+}
+.footer-conter div ul li{
+    margin-bottom: 10px;
+}
+.footer .footer-bottom{
+    width: 90%;
+    margin: 0 auto;
+}
+.footer-bottom .footer-sitemap{
+    width: 100%;
+    height: 1px;
+    margin-bottom: 30px;
+    background-color: rgba(255, 255 ,255, .6);
+}
+.footer-bottom .footer-img{
+    width: 100%;
+    text-align: center;
+}
+.footer-bottom .footer-from{
+    width: 100%;
+    margin-top: 30px;
+}
+.footer-bottom .footer-from h5{
+    text-align: center;
+}
+.footer-from .footer-ipt{
+    width:80%;
+    position: relative;
+    box-sizing: border-box;
+    height: 45px;
+    margin: 10px auto;
+    background-color: white;
+}
+.footer-from .footer-ipt input{
+    color: #2f3132;
+    box-sizing: border-box;
+    height: 45px;
+    width: 85%;
+    padding: 6px 12px;
+    border: 1px solid transparent;
+}
+.footer-from .footer-ipt .footer-button{
+    box-sizing: border-box;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 45px;
+    border: 1px solid #dcfd00;
+    background-color: #dcfd00;
+}
+.footer-from .footer-ipt .footer-button span{
+
+}
+.footer-bottom .footer-copy{
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+.footer-bottom .footer-copy .footer-china{
+    margin-top: 30px;
+}
+.footer-copy .footer-china span:first-child{
+    background-image: url(../images/country.png);
+    display: inline-block;    
+    width: 20px;
+    height: 13px;
+    background-position: -65px -350px;
+}

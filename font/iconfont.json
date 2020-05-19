@@ -1,0 +1,23 @@
+{
+  "id": "1829759",
+  "name": "罗技",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "3295750",
+      "name": "实心箭头右_16px",
+      "font_class": "solid_arrow_right_16px",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "6102956",
+      "name": "购物车",
+      "font_class": "gouwuche",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    }
+  ]
+}
