@@ -144,6 +144,17 @@
         #item3mobile ul li {
             margin-bottom: 0.5rem;
         }
+        .search{
+            display: none;
+            width: 100%;
+        }
+        .search .p2 span{
+            /* float: left;
+            width: 0.6rem;
+          height: 0.6rem; */
+          border-radius: 50%;
+          background-color: ghostwhite;
+        }
     </style>
 </head>
 
@@ -155,6 +166,23 @@
                 <span class="mui-icon  mui-icon-back spn1"></span>
                 <input type="search" class="mui-input-clear ipt1 " placeholder="搜索商品">
                 <span class="spn2" style="display: none;float: left;line-height: 35px;">取消</span>
+            </div>
+            <div class="search">
+                <p>热搜</p>
+                <p class="p2">
+                    <span>G502</span>
+                    <span>G402</span>
+                    <span>G102</span>
+                    <span>G502英雄联盟</span>
+                </p>
+                <p class="p2">
+                    <span>鼠标</span>
+                    <span>G403</span>
+                    <span>G304</span>
+                    <span>G903 </span>
+                    <span>G610 </span>
+                </p>
+                <p class="p2">G302</p>
             </div>
         </div>
       
@@ -540,12 +568,13 @@
         $(".spn1").css("display", "none")
         $(".spn2").css("display", "block")
         $("#slider").hide()
+        $(".search").show()
     })
     $(".ipt1").blur(function () {
         $(".spn1").css("display", "block")
-
         $(".spn2").css("display", "none")
         $("#slider").show()
+        $(".search").hide()
     })
 </script>
 
