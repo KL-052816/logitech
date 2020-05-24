@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index-c.css">
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <script src="js/swiper-3.4.2.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+     <div id="app">
+         <div>
+             <div class="search">
+                <a href="" class="search-cont">
+                    <i class=""></i>
+                    <span>搜索商品</span>
+                </a>
+             </div>
+             <div class="galery swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./images/banner-c-1.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./images/banner-c-2.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./images/banner-c-3.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./images/banner-c-4.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./images/banner-c-5.jpg" alt=""></div>
+                </div>
+                <div class="swiper-pagination spot"></div>
+             </div>
+             <script>
+                var swiper = new Swiper('.swiper-container', {
+                    pagination: '.swiper-pagination',
+                    loop: true,
+                });
+            </script>
+             <div class="home-item">
+                <div class="item">
+                    <a href="">
+                        <div class="item-img">
+                            <img src="./images/vip-Icon.png" alt="">
+                        </div>
+                        <p class="item-text">会员优惠</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <div class="item-img">
+                            <img src="./images/game-Icon.png" alt="">
+                        </div>
+                        <p class="item-text">热卖专区</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <div class="item-img">
+                            <img src="./images/data_image_png;base….png" alt="">
+                        </div>
+                        <p class="item-text">新品上市</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <div class="item-img">
+                            <img src="./images/company-Icon.png" alt="">
+                        </div>
+                        <p class="item-text">企业采购</p>
+                    </a>
+                </div>
+             </div>
+
+             <div class="home-zone">
+                 <div class="zone-combo">
+                     <div class="zone-left">
+                         <a href="">
+                             <div>
+                                 <h3 class="content-name">热卖专区</h3>
+                                 <p class="content-text">精品精买</p>
+                             </div>
+                             <div class="content-img">
+                                 <img src="https://images.wincheers.net/UpLoad/Web/ProductImg/2020-03-12/NEW_XM/动图-004.gif" alt="">
+                             </div>
+                         </a>
+                     </div>
+                     <div class="zone-right">
+                        <a href="">
+                            <h3>罗技黑科技</h3>
+                            <div class="content-img">
+                                <img src="https://images.wincheers.net/UpLoad/Web/ProductImg/2020-03-18/NEW_XM/黑科技PNG-2.png" alt="">
+                            </div>
+                        </a>
+                     </div>
+                 </div>
+                 <div>
+
+                 </div>
+             </div>
+         </div>
+         
+     </div>   
+</body>
+</html>
