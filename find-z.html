@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,
+    user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+    <link rel="stylesheet" href="./fonts/mui.ttf">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="js/mui.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 30px;
+        }
+
+        .warp-top {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #fff;
+            padding: 15px 0;
+            z-index: 999;
+        }
+
+        .warp-top input {
+            width: 90%;
+            float: left;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        .spn1 {
+            float: left;
+            line-height: 35px;
+        }
+
+        #slider {
+            margin-top: 3rem;
+        }
+
+        .mui-slider-group .mui-slider-item ul li {
+            width: 50%;
+            float: left;
+
+        }
+
+        .mui-segmented-control.mui-scroll-wrapper .mui-scroll {
+            width: 100%
+        }
+
+        .mui-scroll {
+
+            position: fixed;
+            top: 60px;
+            left: 30px;
+            background: #fff;
+            padding: 15px 0;
+            z-index: 99999;
+
+        }
+
+        element.style {
+    transform: rotate(90deg);
+}
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: "Glyphicons Halflings";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+    color: red;
+  
+}
+        .div-img img {
+            background-color: whitesmoke;
+        }
+
+        .containt-1 {
+          
+            border: 1px solid whitesmoke;
+        }
+
+        .containt-1 div .p1 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-weight: 400;
+            font-size: .5rem;
+            color: black;
+        }
+
+        .containt-1 div .p2 {
+            font-size: .4rem;
+        }
+
+        .containt-1 div .p3 {
+            color: red;
+            font-size: .4rem;
+        }
+
+        .containt-1 div {
+            padding: .36rem .28rem;
+        }
+
+
+        .mui-segmented-control.mui-scroll-wrapper .mui-scroll {
+            width: 100%;
+            transform: translate3d(0px, 0px, 0px) translateZ(0px);
+            transition-duration: 0ms;
+            transition-timing-function: cubic-bezier(0);
+            width: auto;
+            white-space: nowrap;
+        }
+        .mui-segmented-control.mui-scroll-wrapper .mui-scroll .i1{
+            position: relative;
+    top: -6px;
+    font-size: .3rem;
+        }
+        .mui-segmented-control.mui-scroll-wrapper .mui-scroll .i2{
+            position: relative;
+    top: 4px;
+    left: 5px;
+    font-size: .1rem;
+        }
+        #item3mobile ul li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 顶部搜索框 -->
+        <div class="warp-top">
+            <div class="mui-input-row mui-search">
+                <span class="mui-icon  mui-icon-back spn1"></span>
+                <input type="search" class="mui-input-clear ipt1 " placeholder="搜索商品">
+                <span class="spn2" style="display: none;float: left;line-height: 35px;">取消</span>
+            </div>
+        </div>
+      
+        <!-- 中间的tab切换 -->
+        <div id="slider" class="mui-slider">
+            <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted"
+                id="segmented">
+                <div class="mui-scroll" style="width: 90%;">
+                    <a class="mui-control-item mui-active" href="#item1mobile">
+                        综合
+                    </a>
+                    <a class="mui-control-item" href="#item2mobile">
+                        价格<i class="glyphicon glyphicon-play i1 " style="transform: rotate(90deg);"></i><i
+                            class="glyphicon glyphicon-play i2" style="transform: rotate(270deg);margin-left: -15px;"></i>
+                    </a>
+                    <a class="mui-control-item" href="#item3mobile">
+                        手机专享<i class="glyphicon glyphicon-phone"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 切换的内容 -->
+            <div class="mui-slider-group  " style="width: 100%;">
+                <div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+                    <ul class="mui-table-view">
+                        <li class="mui-table-view-cell">
+
+                            <div class="containt-1">
+
+                                <a href="">
+                                    <div class="div-img"> <img src="./img/2-z.png" alt=""></div>
+                                    <div>
+                                        <p class="p1">罗技 G102二代 LIGHTSYNC游戏鼠标 黑色 </p>
+                                        <p class="p2">游戏级8000 DPI传感器</p>
+                                        <p class="p3">￥149.00</p>
+                                    </div>
+                                </a>
+
+                            </div>
+
+
+                        </li>
+                        <li class="mui-table-view-cell">
+
+                            <div class="containt-1">
+
+                                <a href="">
+                                    <div class="div-img"> <img src="./img/4-z.png" alt=""></div>
+                                    <div>
+                                        <p class="p1">罗技 G102二代 LIGHTSYNC游戏鼠标 黑色 </p>
+                                        <p class="p2">游戏级8000 DPI传感器</p>
+                                        <p class="p3">￥149.00</p>
+                                    </div>
+                                </a>
+
+                            </div>
+
+
+                        </li>
+                        <li class="mui-table-view-cell">
+
+                            <div class="containt-1">
+
+                                <a href="">
+                                    <div class="div-img"> <img src="./img/3-z.png" alt=""></div>
+                                    <div>
+                                        <p class="p1">罗技 G102二代 LIGHTSYNC游戏鼠标 黑色 </p>
+                                        <p class="p2">游戏级8000 DPI传感器</p>
+                                        <p class="p3">￥149.00</p>
+                                    </div>
+                                </a>
+
+                            </div>
+
+
+                        </li>
+                        <li class="mui-table-view-cell">
+
+                            <div class="containt-1">
+
+                                <a href="">
+                                    <div class="div-img"> <img src="./img/4-z.png" alt=""></div>
+                                    <div>
+                                        <p class="p1">罗技 G102二代 LIGHTSYNC游戏鼠标 黑色 </p>
+                                        <p class="p2">游戏级8000 DPI传感器</p>
+                                        <p class="p3">￥149.00</p>
+                                    </div>
+                                </a>
+
+                            </div>
+
+
+                        </li>
+                        <li class="mui-table-view-cell">
+
+                            <div class="containt-1">
+
+                                <a href="">
+                                    <div class="div-img"> <img src="./img/2-z.png" alt=""></div>
+                                    <div>
+                                        <p class="p1">罗技 G102二代 LIGHTSYNC游戏鼠标 黑色 </p>
+                                        <p class="p2">游戏级8000 DPI传感器</p>
+                                        <p class="p3">￥149.00</p>
+                                    </div>
+                                </a>
+
+                            </div>
+
+
+                        </li>
+                        <li class="mui-table-view-cell">
+
+                            <div class="containt-1">
+
+                                <a href="">
+                                    <div class="div-img"> <img src="./img/2-z.png" alt=""></div>
+                                    <div>
+                                        <p class="p1">罗技 G102二代 LIGHTSYNC游戏鼠标 黑色 </p>
+                                        <p class="p2">游戏级8000 DPI传感器</p>
+                                        <p class="p3">￥149.00</p>
+                                    </div>
+                                </a>
+
+                            </div>
+
+
+                        </li>
+                        <li class="mui-table-view-cell">
+
+                            <div class="containt-1">
+
+                                <a href="">
+                                    <div class="div-img"> <img src="./img/4-z.png" alt=""></div>
+                                    <div>
+                                        <p class="p1">罗技 G102二代 LIGHTSYNC游戏鼠标 黑色 </p>
+                                        <p class="p2">游戏级8000 DPI传感器</p>
+                                        <p class="p3">￥149.00</p>
+                                    </div>
+                                </a>
+
+                            </div>
+
+
+                        </li>
+                    </ul>
+                </div>
+                <div id="item2mobile" class="mui-slider-item mui-control-content ">
+                    <ul class="mui-table-view">
+                        <li class="mui-table-view-cell">
+
+                            <div class="containt-1">
+
+                                <a href="">
+                                    <div class="div-img"> <img src="./img/2-z.png" alt=""></div>
+                                    <div>
+                                        <p class="p1">罗技 G102二代 LIGHTSYNC游戏鼠标 黑色 </p>
+                                        <p class="p2">游戏级8000 DPI传感器</p>
+                                        <p class="p3">￥149.00</p>
+                                    </div>
+                                </a>
+
+                            </div>
+
+
+                        </li>
+                        <li class="mui-table-view-cell">
+
+                            <div class="containt-1">
+
+                                <a href="">
+                                    <div class="div-img"> <img src="./img/4-z.png" alt=""></div>
+                                    <div>
+                                        <p class="p1">罗技 G102二代 LIGHTSYNC游戏鼠标 黑色 </p>
+                                        <p class="p2">游戏级8000 DPI传感器</p>
+                                        <p class="p3">￥149.00</p>
+                                    </div>
+                                </a>
+
+                            </div>
+
+
+                        </li>
+                        <li class="mui-table-view-cell">
+
+                            <div class="containt-1">
+
+                                <a href="">
+                                    <div class="div-img"> <img src="./img/3-z.png" alt=""></div>
+                                    <div>
+                                        <p class="p1">罗技 G102二代 LIGHTSYNC游戏鼠标 黑色 </p>
+                                        <p class="p2">游戏级8000 DPI传感器</p>
+                                        <p class="p3">￥149.00</p>
+                                    </div>
+                                </a>
+
+                            </div>
+
+
+                        </li>
+                        <li class="mui-table-view-cell">
+
+                            <div class="containt-1">
+
+                                <a href="">
+                                    <div class="div-img"> <img src="./img/4-z.png" alt=""></div>
+                                    <div>
+                                        <p class="p1">罗技 G102二代 LIGHTSYNC游戏鼠标 黑色 </p>
+                                        <p class="p2">游戏级8000 DPI传感器</p>
+                                        <p class="p3">￥149.00</p>
+                                    </div>
+                                </a>
+
+                            </div>
+
+
+                        </li>
+                        <li class="mui-table-view-cell">
+
+                            <div class="containt-1">
+
+                                <a href="">
+                                    <div class="div-img"> <img src="./img/2-z.png" alt=""></div>
+                                    <div>
+                                        <p class="p1">罗技 G102二代 LIGHTSYNC游戏鼠标 黑色 </p>
+                                        <p class="p2">游戏级8000 DPI传感器</p>
+                                        <p class="p3">￥149.00</p>
+                                    </div>
+                                </a>
+
+                            </div>
+
+
+                        </li>
+                        <li class="mui-table-view-cell">
+
+                            <div class="containt-1">
+
+                                <a href="">
+                                    <div class="div-img"> <img src="./img/2-z.png" alt=""></div>
+                                    <div>
+                                        <p class="p1">罗技 G102二代 LIGHTSYNC游戏鼠标 黑色 </p>
+                                        <p class="p2">游戏级8000 DPI传感器</p>
+                                        <p class="p3">￥149.00</p>
+                                    </div>
+                                </a>
+
+                            </div>
+
+
+                        </li>
+                        <li class="mui-table-view-cell">
+
+                            <div class="containt-1">
+
+                                <a href="">
+                                    <div class="div-img"> <img src="./img/4-z.png" alt=""></div>
+                                    <div>
+                                        <p class="p1">罗技 G102二代 LIGHTSYNC游戏鼠标 黑色 </p>
+                                        <p class="p2">游戏级8000 DPI传感器</p>
+                                        <p class="p3">￥149.00</p>
+                                    </div>
+                                </a>
+
+                            </div>
+
+
+                        </li>
+                    </ul>
+                </div>
+                <div id="item3mobile" class="mui-slider-item mui-control-content ">
+                    <ul class="mui-table-view">
+                        <li class="mui-table-view-cell" style="width:100%;">
+                            <div class="no-img" style="text-align: center;"><i class="mui-icon mui-icon-search"
+                                    style="font-size: 3rem;"></i>
+                                <p data-v-5f568b8e="" class="text" style="margin-top: 10px;">抱歉，没有找到哦 ~</p>
+                            </div>
+                            <p class="like" style="text-align: center;margin-top: 50px;"><span
+                                    class="glyphicon glyphicon-heart" aria-hidden="true"></span> 你可能还喜欢
+                            </p>
+                        </li>
+                        <li>
+
+                            <div class="containt-1">
+
+                                <a href="">
+                                    <div class="div-img"> <img src="./img/2-z.png" alt=""></div>
+                                    <div>
+                                        <p class="p1">罗技 G102二代 LIGHTSYNC游戏鼠标 黑色 </p>
+                                        <p class="p2">游戏级8000 DPI传感器</p>
+                                        <p class="p3">￥149.00</p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </li>
+                        <li>
+
+                            <div class="containt-1">
+
+                                <a href="">
+                                    <div class="div-img"> <img src="./img/2-z.png" alt=""></div>
+                                    <div>
+                                        <p class="p1">罗技 G102二代 LIGHTSYNC游戏鼠标 黑色 </p>
+                                        <p class="p2">游戏级8000 DPI传感器</p>
+                                        <p class="p3">￥149.00</p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </li>
+                        <li>
+
+                            <div class="containt-1">
+
+                                <a href="">
+                                    <div class="div-img"> <img src="./img/2-z.png" alt=""></div>
+                                    <div>
+                                        <p class="p1">罗技 G102二代 LIGHTSYNC游戏鼠标 黑色 </p>
+                                        <p class="p2">游戏级8000 DPI传感器</p>
+                                        <p class="p3">￥149.00</p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </li>
+                        <li>
+
+                            <div class="containt-1">
+
+                                <a href="">
+                                    <div class="div-img"> <img src="./img/2-z.png" alt=""></div>
+                                    <div>
+                                        <p class="p1">罗技 G102二代 LIGHTSYNC游戏鼠标 黑色 </p>
+                                        <p class="p2">游戏级8000 DPI传感器</p>
+                                        <p class="p3">￥149.00</p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </li>
+                        <li>
+
+                            <div class="containt-1">
+
+                                <a href="">
+                                    <div class="div-img"> <img src="./img/2-z.png" alt=""></div>
+                                    <div>
+                                        <p class="p1">罗技 G102二代 LIGHTSYNC游戏鼠标 黑色 </p>
+                                        <p class="p2">游戏级8000 DPI传感器</p>
+                                        <p class="p3">￥149.00</p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </li>
+                        <li>
+
+                            <div class="containt-1">
+
+                                <a href="">
+                                    <div class="div-img"> <img src="./img/2-z.png" alt=""></div>
+                                    <div>
+                                        <p class="p1">罗技 G102二代 LIGHTSYNC游戏鼠标 黑色 </p>
+                                        <p class="p2">游戏级8000 DPI传感器</p>
+                                        <p class="p3">￥149.00</p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+
+    // 控制button的搜索
+    $(".ipt1").focus(function () {
+        $(".spn1").css("display", "none")
+        $(".spn2").css("display", "block")
+        $("#slider").hide()
+    })
+    $(".ipt1").blur(function () {
+        $(".spn1").css("display", "block")
+
+        $(".spn2").css("display", "none")
+        $("#slider").show()
+    })
+</script>
+
+</html>
