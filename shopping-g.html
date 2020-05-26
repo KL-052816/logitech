@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/mui.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/shopping-g.css">
+    <link rel="stylesheet" href="./fonts/iconfont-g.css">
+
+</head>
+
+<body>
+    <!-- 标题 -->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h1 class="panel-title">购物车</h1>
+            <span class="redact">编辑</span>
+        </div>
+        <div class="panel-body">
+            <div>
+                <!-- 购物车为空 -->
+                <div id="nothing">
+                    <div>
+                        <div class="icon-shop">
+                            <span class="iconfont icon-ShoppingcartFil"></span>
+                            <p>购物车是空的~</p>
+                        </div>
+                        <a class="gohere" href="">
+                            <button type="button" class="btn btn-danger" style="background: red;">去逛逛</button>
+                        </a>
+                        <p class="like"><span class="glyphicon glyphicon-heart"></span> 你可能喜欢</p>
+                        <!-- 你可能喜欢 -->
+                        <div class="product">
+                            <ul class="product_like">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 购物车有商品 -->
+                <div id="something" class="something">
+                    <ul class="shopping-trolley">
+                    </ul>
+                    <div class="settle clearfix ">
+                        <div class="settleCheck">
+                            <p><i class="iconCheck "></i>全选</p>
+                            <div class="checkList">
+                                <p>合计:<span class="total font_red">0</span></p>
+                                <p>积分:<span class="font_red">0</span></p>
+                            </div>
+                        </div>
+                        <div class="closeTotal"> 结算</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+        <ul>
+            <li>
+                <a href="">
+                    <span class="iconfont
+                    icon-home"></span>
+                    <p>首页</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span class="iconfont
+                    icon-fenlei"></span>
+                    <p>分类</p>
+                </a>
+            </li>
+            <li>
+                <a href=""> <span class="iconfont
+                    icon-compass"></span>
+                    <p>发现</p>
+                </a>
+            </li>
+            <li>
+                <a href="shopping-g.html">
+                    <span class="iconfont
+                    icon-Shoppingcart"></span>
+                    <p>购物车</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span class="iconfont
+                    icon-my"></span>
+                    <p>我的</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script src="./js/zepto.min.js"></script>
+    <script src="./js/mui.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/mui.min.js"></script>
+
+    <script>
+        var lists = [];
+        var goods = [];
+        var having = true;
+        var showHide = false;
+        var id = "";
+        var unit_price = 0;
+        var product_num = 1;
+        // 打开页面请求数据
+        window.onload = () => {
+            axios.get("http://localhost:3000/shopping-g/something")
+                .then(res => {
+                    if (res.data.data.length > 0) {
+                        console.log(res.data.data)
+                        having = true
+                        goods = res.data.data
+
+                        console.log(lists, goods)
+                        for (var i = 0; i < goods.length; i++) {
+                            num = (goods[i].shopping.split("0").reverse()[0])
+                            id = goods[i].id
+                            $(".shopping-trolley")[0].innerHTML += `
+                           <li data-index="${id}">
+                                <i class="iconCheck "></i>
+                                <div class="something-right">
+                                    <div>
+                                        <div><img src="${goods[i].img}" alt=""></div>
+                                        <a href="detail-g.html?id=${goods[i].id}">${goods[i].title}</a>
+                                       <div class="number">
+                                         <p class="number-name">${goods[i].newprice}</p>
+                                         <div class="mui-numbox" data-numbox-step='1' data-numbox-min='1' data-numbox-max='10'>
+                                        <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+                                        <input class="mui-numbox-input" type="number" value="${num}" />
+                                        <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+                                        </div>
+                                       </div>
+                                    </div>
+                                </div>
+                            </li>
+                           `
+
+                        }
+                        iconCheck()//点击选中事件
+                        showHide = false
+                        showHides()//有无商品显示与隐藏
+
+                    } else {
+                        having = false
+                        showHide = true
+                        nothing()//无商品时调用请求
+                        showHides()
+                    }
+                }).catch(err => {
+                    console.log(err)
+                })
+        }
+
+        // 没有商品请求数据
+        function nothing() {
+            axios.get("http://localhost:3000/shopping-g/nothing")
+                .then(res => {
+                    if (having == false) {
+                        console.log(res.data.data)
+                        lists = res.data.data
+                        showHide = true
+                        for (var i = 0; i < lists.length; i++) {
+                            $(".product_like")[0].innerHTML += `
+                             <li class="col-xs-6 col-sm-6 col-md-4 col-lg-3" >
+                                    <a href="detail-g.html?id=${lists[i].id}">
+                                        <div class="product-img">
+                                            <img src="${lists[i].img}" alt="">
+                                        </div>
+                                        <div class="product-text">
+                                            <p>${lists[i].title}</p>
+                                            <p>${lists[i].detail}</p>
+                                            <p class="product-price">${lists[i].newprice}</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+                             `
+                        }
+                    } else {
+                        having = true
+                    }
+                }).catch(err => {
+                    console.log(err)
+                })
+
+        }
+        // 显示与隐藏
+        function showHides() {
+            if (having == true && showHide == false) {
+                $(".redact").show()
+                $('#nothing').hide()
+                $("#something").show()
+                $('.settle').addClass('tag')
+                $('.settleCheck p i').addClass('iconAll')
+            } else {
+                $(".redact").hide()
+                $('#nothing').show()
+                $(".something").addClass('vanish')
+                $('.settle').removeClass("tag")
+                $('.settleCheck p i').removeClass('iconAll')
+            }
+        }
+        // 选中标红
+        var idex = "";//为商品id
+        function iconCheck() {
+            $(".iconCheck").on('touchstart', (e) => {
+                if (e.target.classList.contains('iconActive')) {
+                    e.target.classList.remove("iconActive")
+                    $(".total").text("0")
+                    $(".closeTotal").removeClass("closeRed")
+                } else {
+                    e.target.classList.add('iconActive')
+                    // 产品id
+                    idex = e.target.parentElement.dataset['index']
+                    // 产品价格
+                    unit_price = e.target.parentElement.children[1].children[0].children[2].children[0].innerHTML.slice(1)
+                    // 产品数量
+                    product_num = e.target.parentElement.children[1].children[0].children[2].children[1].children[1].value
+                    // 产品总价
+                    product_total = parseInt(unit_price) * parseInt(product_num)
+                    $(".total").text(product_total)
+                    $(".closeTotal").addClass("closeRed")
+                }
+            })
+        }
+
+        $('.closeTotal').on('touchstart', () => {
+            if ($('.closeTotal').text() == "删除" && $(".iconCheck").hasClass("iconActive")) {
+                axios.get("http://localhost:3000/shopping-g/del", {
+                    params: {
+                        id: idex
+                    }
+                }).then(res => {
+                    nothing()//无商品时调用请求
+                }).catch(err => {
+                    console.log(err)
+                })
+            }
+        })
+        // 编辑控制删除按钮
+        $('.redact').on("touchstart", (e) => {
+            if ($('.redact').text() == "编辑") {
+                $('.redact').text("完成").addClass("font_red")
+                $(".closeTotal").addClass("closeRed").text("删除")
+            } else {
+                $('.redact').text("编辑").removeClass("font_red")
+                $(".closeTotal").removeClass("closeRed").text("结算")
+            }
+        })
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
