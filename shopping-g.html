@@ -113,6 +113,8 @@
         var id = "";
         var unit_price = 0;
         var product_num = 1;
+        var product_total = 0;
+        var endtotal = 0;
         // 打开页面请求数据
         window.onload = () => {
             axios.get("http://localhost:3000/shopping-g/something")
@@ -121,8 +123,6 @@
                         console.log(res.data.data)
                         having = true
                         goods = res.data.data
-
-                        console.log(lists, goods)
                         for (var i = 0; i < goods.length; i++) {
                             num = (goods[i].shopping.split("0").reverse()[0])
                             id = goods[i].id
@@ -214,26 +214,67 @@
         // 选中标红
         var idex = "";//为商品id
         function iconCheck() {
+
             $(".iconCheck").on('touchstart', (e) => {
+                // 产品id
+                idex = e.target.parentElement.dataset['index']
+                // 产品价格
+                unit_price = parseInt(e.target.parentElement.children[1].children[0].children[2].children[0].innerHTML.slice(1))
+                // 产品数量
+                product_num =parseInt( e.target.parentElement.children[1].children[0].children[2].children[1].children[1].value)
+                // 单个产品总价
+                product_total = parseInt(unit_price) * parseInt(product_num)
+                //  最终总价
+                endtotal = parseInt(e.target.parentElement.parentElement.parentElement.children[1].children[0].children[1].children[0].children[0].innerHTML)
+                product_reduce()//点击数量减少
+                product_add()  //点击数量增加 
                 if (e.target.classList.contains('iconActive')) {
                     e.target.classList.remove("iconActive")
-                    $(".total").text("0")
+                    endtotal = endtotal - product_total
+                    $(".total").text(endtotal)
                     $(".closeTotal").removeClass("closeRed")
+                    // 产品数量
+                    e.target.parentElement.children[1].children[0].children[2].children[1].children[1].value = product_num
+                    // 
                 } else {
                     e.target.classList.add('iconActive')
-                    // 产品id
-                    idex = e.target.parentElement.dataset['index']
-                    // 产品价格
-                    unit_price = e.target.parentElement.children[1].children[0].children[2].children[0].innerHTML.slice(1)
-                    // 产品数量
-                    product_num = e.target.parentElement.children[1].children[0].children[2].children[1].children[1].value
-                    // 产品总价
-                    product_total = parseInt(unit_price) * parseInt(product_num)
-                    $(".total").text(product_total)
                     $(".closeTotal").addClass("closeRed")
+                    alltotal(product_total)
                 }
             })
         }
+        // 数量减少
+        product_reduce = () => {
+            $(".mui-numbox-btn-minus").on('touchstart', (e) => {
+                if (product_num > 1) {
+                    product_num = product_num - 1
+                    e.target.parentElement.children[1].value = product_num
+                    parduct_total = -unit_price
+                    alltotal(parduct_total)
+                } else {
+                    product_num = 1
+                }
+            })
+        }
+        // 数量增加
+        product_add = () => {
+            $(".mui-numbox-btn-plus").on('touchstart', (e) => {
+                product_num = product_num + 1
+                e.target.parentElement.children[1].value = product_num
+                console.log(e.target.parentElement.children[1].value)
+                parduct_total = +unit_price
+                alltotal(parduct_total)
+
+            })
+        }
+        // 总价
+        alltotal = (i) => {
+            console.log(product_total)
+            endtotal = i + endtotal
+            $(".total").text(endtotal)
+        }
+
+
 
         $('.closeTotal').on('touchstart', () => {
             if ($('.closeTotal').text() == "删除" && $(".iconCheck").hasClass("iconActive")) {
@@ -256,6 +297,7 @@
             } else {
                 $('.redact').text("编辑").removeClass("font_red")
                 $(".closeTotal").removeClass("closeRed").text("结算")
+
             }
         })
 
