@@ -173,18 +173,18 @@
     display: block;
     font-size: .6rem;
 }
-.home-news .galery{
+.home-news .galer{
     margin-bottom: -0.1rem;
 }
-.home-news .galery .swiper-wrapper{
+.home-news .galer .swiper-wrapper{
     padding: .1rem 1rem .4rem;
 }
-.home-news .galery .swiper-wrapper .swiper-slide{
+.home-news .galer .swiper-wrapper .swiper-slide{
     width: 92%!important;
     margin-left: .4rem !important;
     margin-right: .4rem!important;
 }
-.home-news .galery .swiper-wrapper .swiper-slide .block{
+.home-news .galer .swiper-wrapper .swiper-slide .block{
     display: flex;
     width: 100%;
     box-shadow: 0 0.05rem 0.3rem 0 hsla(0,0%,40%,.28);
@@ -192,20 +192,20 @@
     background: #fff;
     /* height: 7rem; */
 }
-.home-news .galery .swiper-wrapper .swiper-slide .block .item-img{
+.home-news .galer .swiper-wrapper .swiper-slide .block .item-img{
     /* width: 50rem; */
     width: 47%;
     /* height: 100%; */
 }
-.home-news .galery .swiper-wrapper .swiper-slide .block .item-img img{
+.home-news .galer .swiper-wrapper .swiper-slide .block .item-img img{
     width: 100%;
 }
-.home-news .galery .swiper-wrapper .swiper-slide .block .item-text{
+.home-news .galer .swiper-wrapper .swiper-slide .block .item-text{
     width: 53%;
     padding: .6rem;
     flex: 1;
 }
-.home-news .galery .swiper-wrapper .swiper-slide .block .item-text .name{
+.home-news .galer .swiper-wrapper .swiper-slide .block .item-text .name{
     font-size: .7rem;
     height: 2rem;
     line-height: 1rem;
@@ -217,7 +217,7 @@
     overflow: hidden;
     color: #333333;
 }
-.home-news .galery .swiper-wrapper .swiper-slide .block .item-text .text{
+.home-news .galer .swiper-wrapper .swiper-slide .block .item-text .text{
     color: #999;
     width: 100%;
     height: 2rem;
@@ -231,9 +231,9 @@
 }
 .home-integral .integral-img{
     position: relative;
+    /* height: 800px; */
 }
 .home-integral .integral-img .bg{
-    position: absolute;
     width: 100%;
     height: 100%;
     background: #0000003d;
@@ -264,4 +264,110 @@
     font-size: 0.8rem;
     text-align: center;
     margin-top: .6rem;
+}
+.home-integral .product-scroll1{
+    width: 100%;
+    /* margin-bottom: 500px; */
+    border: 1px solid orange;
+    position: relative;
+    /* z-index: 10000; */
+    /* height: ; */
+}
+.home-integral .product-scroll1 .item-block{
+    width: 7.5rem!important;
+    background: #fff;
+    padding-bottom: .3rem;
+    height: 10rem;
+    /* margin-right: -.013333rem */
+}
+.home-integral .product-scroll1 .item-block .block{
+    height: 100%;
+    width: 100%;
+}
+.home-integral .product-scroll1 .item-block .block .item-img{
+    width: 100%;
+    height: 60%;
+}
+.home-integral .product-scroll1 .item-block .block .item-img img{
+    width: 100%;
+    height: 100%;
+}
+.home-integral .product-scroll1 .item-block .block .item-text{
+    width: 100%;
+    height: 40%;
+    text-align: center;
+}
+.home-integral .product-scroll1 .item-block .block .item-text .name{
+    color: #999;
+    font-size: .8rem;
+    /* margin-bottom: .5rem; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 .3rem;
+    margin: 0px auto;
+}
+.home-integral .product-scroll1 .item-block .block .item-text .price-1{
+    font-size: .6rem;
+    margin-top: 5px;
+    color: #333;
+}
+.home-integral .product-scroll1 .item-block .block .item-text .price-1 .price{
+    color: #fd2645;
+    /* font-size: .6rem; */
+    
+}
+
+/* .home-integral .product-scroll .item-block .block .item-text .price-1 .integral{
+    font-size: .6rem;
+    margin-top: 0px;
+} */
+
+.nav-footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3.5rem;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 999;
+    background: #fff;
+}
+.nav-footer .nav-list{
+    width: 25%;
+}
+.nav-footer .nav-list a{
+    text-align: center;
+}
+.nav-footer .nav-list a i{
+    display: block;
+    margin: .4rem auto;
+    width: 28%;
+    height: 35%;
+}
+.nav-footer .nav-list .icon-sy{
+    background: url(../images/home.png);
+    background-size: 100% 100%;
+}
+.nav-footer .nav-list a p{
+    font-size: .8rem;
+    color: #333;
+    margin-top: 0px;
+}
+.nav-footer .nav-list .icon-fl{
+    background: url(../images/fl.png);
+    background-size: 100% 100%;
+}
+.nav-footer .nav-list .icon-fx{
+    background: url(../images/fx.png);
+    background-size: 100% 100%;
+}
+.nav-footer .nav-list .icon-gwc{
+    background: url(../images/gwc.png);
+    background-size: 100% 100%;
+}
+.nav-footer .nav-list .icon-wd{
+    background: url(../images/wd.png);
+    background-size: 100% 100%;
 }
