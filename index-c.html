@@ -19,7 +19,7 @@
                     <span>搜索商品</span>
                 </a>
              </div>
-             <div class="galery swiper-container">
+             <div class="galery swiper-container swiper-1">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="./images/banner-c-1.jpg" alt=""></div>
                     <div class="swiper-slide"><img src="./images/banner-c-2.jpg" alt=""></div>
@@ -29,12 +29,12 @@
                 </div>
                 <div class="swiper-pagination spot"></div>
              </div>
-             <!-- <script>
-                var swiper = new Swiper('.swiper-container', {
+             <script>
+                var myswiper = new Swiper('.swiper-1', {
                     pagination: '.swiper-pagination',
                     loop: true,
                 });
-            </script> -->
+            </script>
              <div class="home-item">
                 <div class="item">
                     <a href="">
@@ -109,7 +109,7 @@
                     <h3>最新资讯</h3>
                     <a href="" class="more">更多<i class="arrow"></i></a>
                 </div>
-                <div class="galery swiper-container galer">
+                <div class="galery swiper-container galer swiper-2">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <a href="" class="block">
@@ -146,12 +146,12 @@
                         </div>
                     </div>
                  </div>
-                 <!-- <script>
-                    var swiper = new Swiper('.swiper-container', {
+                 <script>
+                    var swiper = new Swiper('.swiper-2', {
                         pagination: '.swiper-pagination',
                         loop: true,
                     });
-                </script> -->
+                </script>
              </div>
              <div class="home-integral">
                  <div class="integral-img">
@@ -168,55 +168,83 @@
                      </a>
                  </div>
                  <div class="product-scroll1">
-                    <div class="galery swiper-container">
-                        <div class="swiper-wrapper" style="width: 100%;">
+                    <div class="galery swiper-container swiper-4">
+                        <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
                             <div class="swiper-slide item-block">
-                                <div class="item-main" style="width: 100%;">
-                                    <a href="" class="block">
-                                        <div class="item-img">
-                                            <img src="https://images.wincheers.net/UpLoad/Web/ProductImg/2019-04-19/NEW_XL/G610-01.png?x-oss-process=image/resize,w_164" alt="">
-                                        </div>
-                                        <div class="item-text">
-                                            <p class="name">G610机械键盘</p>
-                                            <p class="price-1"><span class="price">￥549</span>+ <span class="integral">200积分</span> </p>
-                                        </div>
-                                    </a>
-                                </div>   
+                                <div>
+                                    <div class="item-main">
+                                        <a href="" class="block">
+                                            <div class="item-img">
+                                                <img src="https://images.wincheers.net/UpLoad/Web/ProductImg/2019-04-19/NEW_XL/G610-01.png?x-oss-process=image/resize,w_164" alt="">
+                                            </div>
+                                            <div class="item-text">
+                                                <p class="name">G610机械键盘</p>
+                                                <p class="price-1"><span class="price">￥549</span>+ <span class="integral">200积分</span> </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item-main">
+                                        <a href="" class="block">
+                                            <div class="item-img">
+                                                <img src="https://images.wincheers.net/UpLoad/Web/ProductImg/2019-11-19/NEW_XL/mx518.png?x-oss-process=image/resize,w_164" alt="">
+                                            </div>
+                                            <div class="item-text">
+                                                <p class="name">MIX518游戏鼠标</p>
+                                                <p class="price-1"><span class="price">￥239</span>+ <span class="integral">50积分</span> </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item-main">
+                                        <a href="" class="block">
+                                            <div class="item-img">
+                                                <img src="https://images.wincheers.net/UpLoad/Web/ProductImg/2019-04-11/NEW_XL/g33103.png?x-oss-process=image/resize,w_164" alt="">
+                                            </div>
+                                            <div class="item-text">
+                                                <p class="name">G331游戏耳机</p>
+                                                <p class="price-1"><span class="price">￥369</span>+ <span class="integral">50积分</span> </p>
+                                            </div>
+                                        </a>
+                                    </div>  
+                                </div>
+                                 
+                                
                             </div>
                             <div class="swiper-slide item-block">
-                                <div class="item-main" style="width: 100%;">
-                                    <a href="" class="block">
-                                        <div class="item-img">
-                                            <img src="https://images.wincheers.net/UpLoad/Web/ProductImg/2019-04-19/NEW_XL/G610-01.png?x-oss-process=image/resize,w_164" alt="">
-                                        </div>
-                                        <div class="item-text">
-                                            <p class="name">G610机械键盘</p>
-                                            <p class="price-1"><span class="price">￥549</span>+ <span class="integral">200积分</span> </p>
-                                        </div>
-                                    </a>
-                                </div>   
-                            </div>
-                            <div class="swiper-slide item-block">
-                                <div class="item-main" style="width: 100%;">
-                                    <a href="" class="block">
-                                        <div class="item-img">
-                                            <img src="https://images.wincheers.net/UpLoad/Web/ProductImg/2019-04-19/NEW_XL/G610-01.png?x-oss-process=image/resize,w_164" alt="">
-                                        </div>
-                                        <div class="item-text">
-                                            <p class="name">G610机械键盘</p>
-                                            <p class="price-1"><span class="price">￥549</span>+ <span class="integral">200积分</span> </p>
-                                        </div>
-                                    </a>
-                                </div>   
+                                <div>
+                                    <div class="item-main">
+                                        <a href="" class="block">
+                                            <div class="item-img">
+                                                <img src="https://images.wincheers.net/UpLoad/Web/ProductImg/2019-08-21/NEW_XL/PROX001.png?x-oss-process=image/resize,w_164" alt="">
+                                            </div>
+                                            <div class="item-text">
+                                                <p class="name">GPROX游戏耳机</p>
+                                                <p class="price-1"><span class="price">￥899</span>+ <span class="integral">200积分</span> </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item-main">
+                                        <a href="" class="block">
+                                            <div class="item-img">
+                                                <img src="https://images.wincheers.net/UpLoad/Web/ProductImg/2019-02-14/NEW_XL/G903-01.png?x-oss-process=image/resize,w_164" alt="">
+                                            </div>
+                                            <div class="item-text">
+                                                <p class="name">G903无线鼠标</p>
+                                                <p class="price-1"><span class="price">￥899</span>+ <span class="integral">100积分</span> </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item-main item-main-last">
+                                        <a href="" class="block block-last" >
+                                            <div class="cont">
+                                                <span>产看更多</span><i></i>
+                                            </div>    
+                                        </a>
+                                    </div>
+                                </div> 
                             </div>
                         </div>
                      </div>
-                     <!-- <script>
-                        var swiper = new Swiper('.swiper-container', {
-                            pagination: '.swiper-pagination',
-                            loop: true,
-                        });
-                    </script> -->
+                     
                  </div>
              </div>
              <div class="home-integral">
@@ -236,10 +264,10 @@
                     </a>
                 </div>
                 <div class="product-scroll1">
-                   <div class="galery swiper-container">
-                       <div class="swiper-wrapper" style="width: 100%;">
+                   <div class="galery swiper-container swiper-4">
+                       <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
                            <div class="swiper-slide item-block">
-                               <div class="item-main" style="width: 100%;">
+                               <div class="item-main" >
                                    <a href="" class="block">
                                        <div class="item-img">
                                            <img src="./images/zjy4-c.jpg" alt="">
@@ -249,18 +277,231 @@
                                            <p class="price-1"><span class="price">￥149</span></p>
                                        </div>
                                    </a>
+                               </div>
+                               <div class="item-main" >
+                                    <a href="" class="block">
+                                        <div class="item-img">
+                                            <img src="https://images.wincheers.net/UpLoad/Web/ProductImg/2019-12-17/NEW_XL/PRO X.png?x-oss-process=image/resize,w_164" alt="">
+                                        </div>
+                                        <div class="item-text">
+                                            <p class="name">PRO X游戏键盘</p>
+                                            <p class="price-1"><span class="price">￥1299</span></p>
+                                        </div>
+                                    </a>
+                               </div>
+                               <div class="item-main" >
+                                    <a href="" class="block">
+                                        <div class="item-img">
+                                            <img src="https://images.wincheers.net/UpLoad/Web/ProductImg/2019-10-24/NEW_XL/套餐.png?x-oss-process=image/resize,w_164" alt="">
+                                        </div>
+                                        <div class="item-text">
+                                            <p class="name">G502无线+G PowerPlay</p>
+                                            <p class="price-1"><span class="price">￥1849</span></p>
+                                        </div>
+                                    </a>
                                </div>   
-                           </div>
-                           
-                       </div>
-                    </div>
-                    <script>
-                       var swiper = new Swiper('.swiper-container', {
-                           pagination: '.swiper-pagination',
-                           loop: true,
-                       });
-                   </script>
+                        </div>
+                        <div class="swiper-slide item-block">
+                            <div class="item-main" >
+                                <a href="" class="block">
+                                    <div class="item-img">
+                                        <img src="https://images.wincheers.net/UpLoad/Web/ProductImg/2019-09-09/NEW_XL/master3.png?x-oss-process=image/resize,w_164" alt="">
+                                    </div>
+                                    <div class="item-text">
+                                        <p class="name">Master 3</p>
+                                        <p class="price-1"><span class="price">￥899</span></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item-main" >
+                             <a href="" class="block">
+                                 <div class="item-img">
+                                     <img src="https://images.wincheers.net/UpLoad/Web/ProductImg/2019-03-06/NEW_XL/k380b.png?x-oss-process=image/resize,w_164" alt="">
+                                 </div>
+                                 <div class="item-text">
+                                     <p class="name">Pebble鹅卵石+K380</p>
+                                     <p class="price-1"><span class="price">￥328</span></p>
+                                 </div>
+                             </a>
+                            </div>
+                            <div class="item-main item-main-last">
+                                <a href="" class="block block-last" >
+                                    <div class="cont">
+                                        <span>产看更多</span><i></i>
+                                    </div>    
+                                </a>
+                            </div>   
+                     </div>
                 </div>
+            </div>
+            <script>
+                var swiper = new Swiper('.swiper-4', {
+                    pagination: '.swiper-pagination',
+                    loop: false,
+                });
+            </script>
+                </div>
+            </div>
+            <div class="home-cate">
+                <div class="cate-head">
+                    <a href="">游戏鼠标</a><i></i>
+                </div> 
+                <div class="swiper-container swiper-5 swiper-container-initialized swiper-container-horizontal">
+                    <div class="swiper-wrapper" >
+                      <div class="swiper-slide bloc">
+                          <div class="cate-mouse">
+                              <div class="cate-cont1">
+                                  <a href="">
+                                      <div class="cate-img">
+                                          <img src="https://images.wincheers.net/UpLoad/Web/ProductImg/2019-05-29/NEW_XM/G502wx.png?x-oss-process=image/resize,w_264" alt="">
+                                      </div>
+                                      <div class="cate-item">
+                                          <h3 class="title">罗技 G502 LIGHTSPEED 创世者无线游戏鼠标 </h3>
+                                          <p class="intro">疾速无线 高性能HERO </p>
+                                          <p class="price"><span>￥1099</span></p>
+                                      </div>
+                                  </a>
+                              </div>
+                              <div class="cate-cont2">
+                                <a href="">
+                                    <div class="cate-img">
+                                        <img src="https://images.wincheers.net/UpLoad/Web/ProductImg/2019-02-18/NEW_XM/b-G102-01.png?x-oss-process=image/resize,w_264" alt="">
+                                    </div>
+                                    <div class="cate-item">
+                                        <h3 class="title">罗技 G102游戏鼠标 黑色 </h3>
+                                        <p class="intro">CGS传感器 自定义RGB灯光 </p>
+                                        <p class="price"><span>￥199</span></p>
+                                    </div>
+                                </a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide bloc1">
+                        <div class="cate-mouse">
+                            <div class="cate-cont1">
+                                <a href="">
+                                    <div class="cate-img">
+                                        <img src="https://images.wincheers.net/UpLoad/logitech/xx/G603-01.png?x-oss-process=image/resize,w_264" alt="">
+                                    </div>
+                                    <div class="cate-item">
+                                        <h3 class="title">罗技 G603无线游戏鼠标 </h3>
+                                        <p class="intro">2.4GHZ抗干扰无线畅玩 </p>
+                                        <p class="price"><span>￥599</span></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cate-cont2">
+                              <a href="">
+                                  <div class="cate-img">
+                                      <img src="https://images.wincheers.net/UpLoad/Web/ProductImg/2019-02-14/NEW_XM/G903-01.png?x-oss-process=image/resize,w_264" alt="">
+                                  </div>
+                                  <div class="cate-item">
+                                      <h3 class="title">罗技 G903 LIGHTSPEED 无线游戏鼠标  新一代HERO传感器 </h3>
+                                      <p class="intro">新一代HERO传感器 </p>
+                                      <p class="price"><span>￥899</span></p>
+                                  </div>
+                              </a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="cate-mouse">
+                            <div class="cate-cont1">
+                                <a href="">
+                                    <div class="cate-img">
+                                        <img src="https://images.wincheers.net/UpLoad/Web/ProductImg/2019-02-27/NEW_XM/G403wx-01.png?x-oss-process=image/resize,w_264" alt="">
+                                    </div>
+                                    <div class="cate-item">
+                                        <h3 class="title">罗技 G403有线无线双模式游戏鼠标 </h3>
+                                        <p class="intro">人体工学 橡胶握槽 </p>
+                                        <p class="price"><span>￥799</span></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="home-cate home-cate1">
+                    <div class="cate-head">
+                        <a href="">游戏键盘</a><i></i>
+                    </div> 
+                    <div class="swiper-container swiper-5 swiper-container-initialized swiper-container-horizontal">
+                        <div class="swiper-wrapper" >
+                          <div class="swiper-slide bloc">
+                              <div class="cate-mouse">
+                                  <div class="cate-cont1">
+                                      <a href="">
+                                          <div class="cate-img">
+                                              <img src="https://images.wincheers.net/UpLoad/Web/ProductImg/2019-09-02/NEW_XM/g913.png" alt="">
+                                          </div>
+                                          <div class="cate-item">
+                                              <h3 class="title">罗技 G913 无线 RGB 机械游戏键盘 (GL-Clicky)  </h3>
+                                              <p class="intro">USB2.0扩展端口  </p>
+                                              <p class="price"><span>￥1699</span></p>
+                                          </div>
+                                      </a>
+                                  </div>
+                                  <div class="cate-cont2">
+                                    <a href="">
+                                        <div class="cate-img">
+                                            <img src="https://images.wincheers.net/UpLoad/Web/ProductImg/2019-02-18/NEW_XM/G910-01.png" alt="">
+                                        </div>
+                                        <div class="cate-item">
+                                            <h3 class="title">罗技 G910炫光机械游戏键盘  </h3>
+                                            <p class="intro">疾速炫酷 一触即发   </p>
+                                            <p class="price"><span>￥1299</span></p>
+                                        </div>
+                                    </a>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="swiper-slide bloc1">
+                            <div class="cate-mouse">
+                                <div class="cate-cont1">
+                                    <a href="">
+                                        <div class="cate-img">
+                                            <img src="https://images.wincheers.net/UpLoad/Web/ProductImg/2019-04-19/NEW_XM/G610-01.png" alt="">
+                                        </div>
+                                        <div class="cate-item">
+                                            <h3 class="title">罗技 G610背光机械游戏键盘 青轴 </h3>
+                                            <p class="intro">强段落式键入感  </p>
+                                            <p class="price"><span>￥899</span></p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="cate-cont2">
+                                  <a href="">
+                                      <div class="cate-img">
+                                          <img src="https://images.wincheers.net/UpLoad/Web/ProductImg/2019-11-29/NEW_XM/GProjp-01.png" alt="">
+                                      </div>
+                                      <div class="cate-item">
+                                          <h3 class="title">罗技 G Pro RGB机械游戏键盘 </h3>
+                                          <p class="intro">可拆卸USB连接线  </p>
+                                          <p class="price"><span>￥899</span></p>
+                                      </div>
+                                  </a>
+                                </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination "></div>
+                    </div>
+                <script>
+                    var swiper = new Swiper('.swiper-5', {
+                      slidesPerView: 2,
+                      spaceBetween: 30,
+                      pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                      },
+                    });
+                  </script>
             </div>
          </div>
          <!-- <div class="nav-footer">
